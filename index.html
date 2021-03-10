@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script src="https://cdn.bootcdn.net/ajax/libs/lodash.js/4.17.20/lodash.core.js"></script>
+    <script>
+        var users = [{
+        'user': 'barney',
+        'age': 36
+    },
+    {
+        'user': 'fred',
+        'age': 40
+    },
+    {
+        'user': 'pebbles',
+        'age': 1
+    }, {
+        'user': 'tom',
+        'age': 16
+    }
+];
+
+var youngest = _
+    .chain(users)
+    .sortBy('age')
+    .map(function (o) {
+        return o.user + ' is ' + o.age;
+    })
+    .head()
+    .value();
+
+console.log(youngest);
+    </script>
+</body>
+</html>
