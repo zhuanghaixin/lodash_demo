@@ -180,7 +180,7 @@ const arr2 = [2.3, 3.4, 4.5, 5.6, 6.7, 7.8]
 
 const newArr = _.intersectionWith(arr1, arr2, (arrVal, othVal) => {
     console.log('arrVal: ', arrVal, 'othVal:', othVal)
-    return Math.floor(arrVal) == Math.floor(othVal)
+    return Math.floor(arrVal) === Math.floor(othVal)
 })
 console.log('newArr', newArr)
 // _.join
